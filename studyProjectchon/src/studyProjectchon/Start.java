@@ -44,11 +44,9 @@ public class Start {
 		 int x = scan.nextInt();
 		 if(x==1) {
 			x = x+9;
-		 }
-		 if(x==2) {
+		 }else if(x==2){
 			 x =x +7;
-		 }
-		 if(x==3) {
+		 }else if(x==3) {
 			 x= x+6;
 		 }
 		 for(int i = 0; i<x; i++) {	 
