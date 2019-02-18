@@ -38,7 +38,8 @@ public class Example {
 				normalAccount.setNormalTotal(normalCustomer);
 				normalAccount.setVipTotal(vipCustomer);
 				System.out.println("일반 고객의 이자는 : "+normalAccount.getNormalTotal()+"입니다.");
-				System.out.println("우수 고객의 이자는 "+normalAccount.getVipTotal()+"입니다.");
+				System.out.println("우수 고객의 이자는 : "+normalAccount.getVipTotal()+"입니다.");
+				System.out.println();
 			}
 		};
 		
@@ -63,6 +64,4 @@ class NormalAccount {
 	public void setVipTotal(int vipTotal) {
 		this.vipTotal += vipTotal*3;
 	}
-
-		
 }
