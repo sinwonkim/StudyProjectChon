@@ -9,20 +9,19 @@ public class ForInFor {
 	 * 바깥쪽 for문과 안쪽 for문 
 	 */
 	public static void main(String[] args) {
-		 Scanner scan = new Scanner(System.in);
-		 System.out.println("숫자를 입력해 주세요");
-		 int inputNumber = scan.nextInt();
-		 
-		 if(inputNumber<=100) {
-			 System.out.println("입력한 숫자가 100 이하 입니다.");
-		 }
-		 
-		for(int i = 0; i < 3; i++) { // 바깥쪽 for문 
-			for(int j  = 0; j < 3; j++) {
-				System.out.print("["+i+","+j+"]");
+		Scanner scan = new Scanner(System.in);
+		String something = scan.nextLine();		
+		System.out.print("구구단  이라고 입력하세요 그러면 시작 합니다.");
+		System.out.println();
+		
+		 if(something.equals("구구단")) {
+		for(int i = 2; i < 10; i++) { // 바깥쪽 for문 
+			for(int j  = 1; j < 10; j++) {
+				System.out.println(i+"x"+j+"="+i*j);
 			}
-			System.out.println("안쪽 for문 벗어남 ");
+			System.out.println(i+"단 끝!");
 			System.out.println();
 		}
+	}
 	}
 }
