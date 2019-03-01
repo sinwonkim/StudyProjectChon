@@ -8,6 +8,8 @@ public class MainClassTest {
 		System.out.println(objectTest.a);
 		objectTest.printTest(objectTest);
 		System.out.println(objectTest.a);
+		ObjectTest objectTest2 = new ObjectTest();
+		System.out.println("objectTest2 : "+objectTest2.a);
 	}
 
 }
