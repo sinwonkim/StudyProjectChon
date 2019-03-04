@@ -38,17 +38,16 @@ public class Startgame {
 					System.out.println("2. 드래곤의 협곡");
 					System.out.println("3. 용의 협곡");
 					huntingGround = scanner.nextInt();
-
 					if (huntingGround == 1) {
-						Monster monster = new Monster("붉은덩굴정령", 5, 10, 20);// manme,hp,att,exp 추후 턴어라운드방식 같은거 구현해보자
+						Monster monster = new Monster("붉은덩굴정령", 5, 1, 20);// manme,hp,money,exp 추후 턴어라운드방식 같은거 구현해보자
 						fight(monster);
 
 					} else if (huntingGround == 2) {
-						Monster monster = new Monster("드래곤", 12, 10, 30);
+						Monster monster = new Monster("드래곤", 12, 2, 30);
 						fight(monster);
 
 					} else if (huntingGround == 3) {
-						Monster monster = new Monster("내셔남작", 20, 8, 50);
+						Monster monster = new Monster("내셔남작", 20,3, 50);
 						fight(monster);
 					} else if (gameOption == 2) {} // 케릭터 변경시 추가할 사항
 						
@@ -65,7 +64,7 @@ public class Startgame {
 		System.out.println("1. 케릭터 생성");
 		System.out.println("3. 게임 종료");
 		gameOption = scanner.nextInt();
-
+		scanner.nextLine();
 		if (gameOption == 1) {
 			System.out.println("케릭터 명을 입력 해 주세요 : ");
 			name = scanner.next();
@@ -95,17 +94,17 @@ public class Startgame {
 		System.out.println("level : " + charactor[current].level);
 		System.out.println("공격력 : " + charactor[current].att);
 		System.out.println("mp : " + charactor[current].mp);
-		System.out.println("레벨업 까지 필요 경험치: " + charactor[current].needExp+"Exp");
+		System.out.println("레벨업까지 필요 경험치: " + charactor[current].needExp+"Exp");
 		System.out.println("현재 경험치 : " + charactor[current].totalExp+"Exp");
+		System.out.println("현재 골드량: " + charactor[current].totalMoney+"Gold");
 		System.out.println("스킬 데미지 : " + charactor[current].skillDamage);
 		System.out.println();
 		System.out.println("1. 몬스터 사냥");
-	/*	System.out.println("2. 전직");*/
 		System.out.println("3. 초기화면으로 돌아가기");	
 		String selectPick = scanner.nextLine();
 		selectPick.trim();
 		playOption = Integer.parseInt(selectPick);
-		
+		System.out.println();
 	}
 
 	static void fight(Monster monster) {
@@ -113,16 +112,18 @@ public class Startgame {
 		while (monster.hp > 0) {
 			// hp가 0이 될떄까지 반복
 			if(charactor[current].job.equals("모험가")) {
+				System.out.println();
+				System.out.println("★ ★ ★  ★ ★ ★ ★ ★ ★★ ★ ★  ★ ★ ★ ★ ★ ★");
 				System.out.println("★ ★ ★  ★ ★ ★ ★ ★ ★★ ★ ★  ★ ★ ★ ★ ★ ★");
 				System.out.println("=====전투중인 몬스터 정보====");
-				System.out.println("이름 :" + monster.name + "\n" + "남은체력 : " + monster.hp + "\n");
+				System.out.println("이름 : " + monster.name + "\n" + "남은체력 : " + monster.hp + "\n");
 				System.out.println("1.공격하기");
-			}else if(charactor[current].job.equals("전사")) {
+			}else if(charactor[current].job.equals("야스오")) {
 				System.out.println("=====전투중인 몬스터 정보====");
 				System.out.println("이름 :" + monster.name + "\n" + "남은체력 : " + monster.hp + "\n");
 				System.out.println("1.공격하기");
 				System.out.println("2.파워어택");	
-			}else if(charactor[current].job.equals("궁수")) {
+			}else if(charactor[current].job.equals("베인")) {
 				System.out.println("=====전투중인 몬스터 정보====");
 				System.out.println("이름 :" + monster.name + "\n" + "남은체력 : " + monster.hp + "\n");
 				System.out.println("1.공격하기");
@@ -149,7 +150,7 @@ public class Startgame {
 			    }
 		    }
 		}
-		System.out.println("몬스터를 죽였습니다.");
+		System.out.println(monster.name+"을 죽였습니다.");
 		charactor[index].levelUp(monster.exp); // return 경험치 넘겨줌
 		System.out.println();
 		

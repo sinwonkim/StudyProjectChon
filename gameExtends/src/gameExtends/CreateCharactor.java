@@ -9,6 +9,7 @@ public class CreateCharactor extends CharactorStats {
 	int skillDamage = 1;
 	public int totalExp = 0; 
 	public int needExp = 10;
+	public int totalMoney = 0;
 	
 		
 	public CreateCharactor(String name) {
@@ -29,6 +30,7 @@ public class CreateCharactor extends CharactorStats {
 	public void attack(Monster monster) {
 		monster.hp -= this.att;
 		System.out.println("공격 성공");
+		this.totalMoney += monster.money; // MoneySteal 
 	}
 
 	// 전사,궁수 스탯 초기화 메소드

@@ -7,9 +7,9 @@ public class Vein extends CreateCharactor {
 	}
 	
 	public void Basic(CreateCharactor create) {
-		System.out.println("궁수로 전직 했습니다.!!");
+		System.out.println("베인으로 전직 했습니다.!!");
 		System.out.println("스킬을 사용 할 수 있습니다.");
-		create.job = "궁수";
+		create.job = "베인";
 		create.level = 1;
 		create.att +=2;
 		create.mp +=10;

@@ -8,9 +8,9 @@ public class Yasuo extends CreateCharactor{
 	}
 	
 	public void Basic(CreateCharactor create ) {
-		System.out.println("전사로 전직 했습니다.!!");
+		System.out.println("야스오로전직 했습니다.!!");
 		System.out.println("★ ★★ ★★스킬을 사용 할 수 있습니다. ★ ★ ★ ★ ★");
-		create.job = "전사";
+		create.job = "야스오";
 		create.level = 1;
 		create.att +=3;
 		create.mp += 5;
