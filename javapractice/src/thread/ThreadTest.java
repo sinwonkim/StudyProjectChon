@@ -1,8 +1,14 @@
 package thread;
 
-public class ThreadTest extends theradSample {
+public class ThreadTest  {
+
+
 	public static void main(String[] args) {
-		ThreadTest threadtest = new ThreadTest();
-		threadtest.start();
+		for(int i = 0; i<10; i++) {
+			theradSample threadtest = new theradSample(i);
+			threadtest.start();
+		}
+		System.out.println("main end");
 	}
 }
+	
