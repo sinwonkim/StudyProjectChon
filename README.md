@@ -5,9 +5,9 @@
 </div>
   
 <div>
-<src img="https://i.imgur.com/P2gcPgO.png">
+<img src="https://i.imgur.com/P2gcPgO.png">
 </div>
   
 <div>
-<src img="https://i.imgur.com/jsxXFwl.png">
+<img src="https://i.imgur.com/jsxXFwl.png">
 </div>
