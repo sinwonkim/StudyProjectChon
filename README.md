@@ -1,7 +1,7 @@
 # JAVATest RPG 
 
 <div>
-<src img="https://i.imgur.com/Y5SvHIh.png">
+<img src="https://i.imgur.com/Y5SvHIh.png">
 </div>
   
 <div>
